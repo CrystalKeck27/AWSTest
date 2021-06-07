@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {Auth} from 'aws-amplify';
 
 @Component({
     selector: 'app-sign-up',
@@ -9,8 +10,7 @@ import {Router} from '@angular/router';
 export class SignUpComponent implements OnInit {
     email: string;
     password: string;
-    givenName: string;
-    familyName: string;
+    name: string;
 
     constructor(private router: Router) {
     }
@@ -25,8 +25,7 @@ export class SignUpComponent implements OnInit {
                 password: this.password,
                 attributes: {
                     email: this.email,
-                    given_name: this.givenName,
-                    family_name: this.familyName
+                    name: this.name
                 }
             });
             console.log({user});
