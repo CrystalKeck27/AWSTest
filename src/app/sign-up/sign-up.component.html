@@ -1,0 +1,23 @@
+<form>
+    <div>
+        <h1 style="color: blue;">Register with My APP</h1>
+    </div>
+    <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" [(ngModel)]="name" required id="name" placeholder="Enter your name">
+    </div>
+    <div>
+        <label for="email">Email address</label>
+        <input type="email" name="email" [(ngModel)]="email" required id="email" placeholder="Enter your email">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" [(ngModel)]="password" name="password" required id="password" placeholder="Enter your password">
+    </div>
+
+    <div>
+        <br />
+        <button (click)="register()" class="btn btn-primary btn-block" type="button"> Register </button>
+    </div>
+</form>
+<p class="text-dark mb-0">Already a member? <a routerLink="/login" routerLinkActive="active" class="text-primary ml-1">Login</a></p>
